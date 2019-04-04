@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class InteractiveObject : MonoBehaviour, IInteractive
 {
     [SerializeField]
@@ -16,7 +17,14 @@ public class InteractiveObject : MonoBehaviour, IInteractive
     }
     public void InteractWith()
     {
-        audioSource.Play();
+        try
+        {
+            audioSource.Play();
+        }
+        catch
+        {
+            throw new System.Exception("Missing AudioSource component: InteractiveObject requires an AudioSource component.");
+        }
         Debug.Log($"Player just interacted with {gameObject.name}.");
     }
 }
