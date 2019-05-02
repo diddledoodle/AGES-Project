@@ -15,15 +15,13 @@ public class Door : InteractiveObject
     {
         displayText = nameof(Door);
     }
-
     protected override void Awake()
     {
         base.Awake();
         animator = GetComponent<Animator>();
     }
-
     public override void InteractWith()
-    {
+    {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
         if (!isOpen)
         {
             base.InteractWith();
@@ -31,6 +29,5 @@ public class Door : InteractiveObject
             displayText = string.Empty;
             isOpen = true;
         }
-        
     }
 }
