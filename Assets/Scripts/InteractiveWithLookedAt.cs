@@ -9,7 +9,6 @@ using UnityEngine;
 public class InteractiveWithLookedAt : MonoBehaviour
 {
     private IInteractive lookedatInteractive;
-
     // Update is called once per frame
     void Update()
     {
@@ -17,10 +16,8 @@ public class InteractiveWithLookedAt : MonoBehaviour
         {
             Debug.Log("Player pressed the Interact button.)");
             lookedatInteractive.InteractWith();
-            
         }
     }
-
     private void OnLookedAtInteractiveChanged(IInteractive newLookedatInteractive)
     {
         lookedatInteractive = newLookedatInteractive;
