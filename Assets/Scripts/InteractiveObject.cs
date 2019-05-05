@@ -7,10 +7,8 @@ public class InteractiveObject : MonoBehaviour, IInteractive
 {
     [SerializeField]
     protected string displayText = nameof(InteractiveObject);
-
     public string DisplayText => displayText;
     private AudioSource audioSource;
-
     protected virtual void Awake()
     {
         audioSource = GetComponent<AudioSource>();
@@ -28,4 +26,3 @@ public class InteractiveObject : MonoBehaviour, IInteractive
         Debug.Log($"Player just interacted with {gameObject.name}.");
     }
 }
-
