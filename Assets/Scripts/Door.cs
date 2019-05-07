@@ -5,6 +5,24 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class Door : InteractiveObject
 {
+    [Tooltip("Check this to lock the door.")]
+    [SerializeField]
+    private bool isLocked = false;
+
+    [Tooltip("The text that displays when the player looks at the door while it's locked.")]
+    [SerializeField]
+    private string lockedDisplayText = "Locked";
+
+    [Tooltip("Play this audio when the player interacts with a locked door.")]
+    [SerializeField]
+    private AudioClip lockedAudioClip;
+
+    [Tooltip("Play this audio when the player opens the door.")]
+    [SerializeField]
+    private AudioClip openAudioClip;
+
+    public override string DisplayText => isLocked ? lockedDisplayText: base.DisplayText;
+   
     private Animator animator;
     private bool isOpen = false;
     private int shouldOpen = Animator.StringToHash(nameof(shouldOpen));
@@ -24,10 +42,18 @@ public class Door : InteractiveObject
     {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
         if (!isOpen)
         {
-            base.InteractWith();
-            animator.SetBool(shouldOpen, true);
-            displayText = string.Empty;
-            isOpen = true;
+            if (!isLocked)
+            {
+                audioSource.clip = openAudioClip;
+                animator.SetBool(shouldOpen, true);
+                displayText = string.Empty;
+                isOpen = true;
+            }
+            else // if the door is locked...
+            {
+                audioSource.clip = lockedAudioClip;
+            }
+            base.InteractWith();//this plays a sound effect!
         }
     }
 }
