@@ -8,9 +8,18 @@ public class InventoryObject : InteractiveObject
     [SerializeField]
     private string objectName = nameof(InventoryObject);
 
+    [Tooltip("The text that will display when the player selects this object in the inventory menu.")]
+    [TextArea(3,8)]
+    [SerializeField]
+    private string description;
+
+    [Tooltip("Icon to display for this object in the inventory menu.")]
+    [SerializeField]
+    private Sprite icon;
+
     public string ObjectName => objectName;
-    //TODO: ADD LONG DESCRIPTION FIELD
-    //TODO: ADD ICON FIELD
+    public Sprite Icon => icon;
+    public string Description => description;
     private new Renderer renderer;
     private new Collider collider;
 
