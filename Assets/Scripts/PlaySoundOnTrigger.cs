@@ -10,13 +10,19 @@ public class PlaySoundOnTrigger : InteractiveObject
     private AudioClip itemClip;
     [SerializeField]
     private bool isPlayed;
+    [SerializeField]
+    private bool isPlaying;
 
     protected override void Awake()
     {
         base.Awake();
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = itemClip;
-        isPlayed = false;
+    }
+
+    private void Update()
+    {
+        isPlaying = audioSource.isPlaying;
     }
     public override void InteractWith()
     {
@@ -27,6 +33,10 @@ public class PlaySoundOnTrigger : InteractiveObject
             audioSource.Play();
         }
         if (!isPlayed)
+        {
+            audioSource.Stop();
+        }
+        if (isPlaying)
         {
             audioSource.Stop();
         }

@@ -3135,7 +3135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayText: InteractiveObject
   itemClip: {fileID: 8300000, guid: d5259ae2122d7964f970d498611c88c9, type: 3}
-  isPlayed: 1
+  isPlayed: 0
 --- !u!65 &1275183309
 BoxCollider:
   m_ObjectHideFlags: 0
