@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class PlaySoundOnTrigger : InteractiveObject
 {
-
     [Tooltip("This is a seperate audio clip that will play when player interacts with a specific object, such as an alarm.")]
     [SerializeField]
     private AudioClip itemClip;
+    [Tooltip("This bool means the sound is not currently playing.")]
     [SerializeField]
     private bool isPlayed;
+    [Tooltip("This bool means the sound is currently playing.")]
     [SerializeField]
     private bool isPlaying;
 
@@ -19,7 +20,6 @@ public class PlaySoundOnTrigger : InteractiveObject
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = itemClip;
     }
-
     private void Update()
     {
         isPlaying = audioSource.isPlaying;
@@ -27,7 +27,6 @@ public class PlaySoundOnTrigger : InteractiveObject
     public override void InteractWith()
     {
         base.InteractWith();
-        
         if (isPlayed)
         {
             audioSource.Play();
