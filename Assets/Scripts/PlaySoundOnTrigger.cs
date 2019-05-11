@@ -7,10 +7,8 @@ public class PlaySoundOnTrigger : InteractiveObject
     [Tooltip("This is a seperate audio clip that will play when player interacts with a specific object, such as an alarm.")]
     [SerializeField]
     private AudioClip itemClip;
-    [Tooltip("This bool means the sound is not currently playing.")]
     [SerializeField]
     private bool isPlayed;
-    [Tooltip("This bool means the sound is currently playing.")]
     [SerializeField]
     private bool isPlaying;
 
@@ -19,6 +17,7 @@ public class PlaySoundOnTrigger : InteractiveObject
         base.Awake();
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = itemClip;
+        audioSource.Play();
     }
     private void Update()
     {
