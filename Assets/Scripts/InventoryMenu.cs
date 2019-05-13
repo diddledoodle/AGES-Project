@@ -11,10 +11,10 @@ public class InventoryMenu : MonoBehaviour
     private GameObject inventoryMenuItemTogglePrefab;
     [Tooltip("Place in UI for displaying the selected inventory item name.")]
     [SerializeField]
-    private TextMeshProUGUI itemLabelText;
+    private Text itemLabelText;
     [Tooltip("Place in UI for displaying the selected inventory item info.")]
     [SerializeField]
-    private TextMeshProUGUI descriptionAreaText;
+    private Text descriptionAreaText;
     [Tooltip("Content of the scrollview for the list of inventory items.")]
     [SerializeField]
     private Transform inventoryListContentArea;

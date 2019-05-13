@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6840482894090505443}
   - component: {fileID: 5895976004204234939}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Icon Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65,7 +65,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c171fd0ccc477d14e85e50f13ce12853, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4471d37e9c314024ba25e89f2f5c9929, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -159,6 +159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1620839516078723807}
   - component: {fileID: 1620839516078723806}
+  - component: {fileID: 2120944928}
   m_Layer: 5
   m_Name: InventoryItemToggle
   m_TagString: Untagged
@@ -229,10 +230,34 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2120944928}
+        m_MethodName: InventoryMenuItemWasToggled
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
+--- !u!114 &2120944928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620839516078723804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81fd960e855c40e49aa6f9f77ad78d43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iconImage: {fileID: 5895976004204234939}
 --- !u!1 &1620839516642339072
 GameObject:
   m_ObjectHideFlags: 0
