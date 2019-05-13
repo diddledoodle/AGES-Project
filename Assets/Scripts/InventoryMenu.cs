@@ -20,7 +20,7 @@ public class InventoryMenu : MonoBehaviour
     private Transform inventoryListContentArea;
     private static InventoryMenu instance;
     private CanvasGroup canvasGroup;
-    private FirstPersonController fpsController;
+    private RigidbodyFirstPersonController fpsController;
     private AudioSource audioSource;
     public static InventoryMenu Instance
     {
@@ -109,7 +109,7 @@ public class InventoryMenu : MonoBehaviour
             throw new System.Exception("There is already an instance of InventoryMenu and there can only be one.");
 
         canvasGroup = GetComponent<CanvasGroup>();
-        fpsController = FindObjectOfType<FirstPersonController>();
+        fpsController = FindObjectOfType<RigidbodyFirstPersonController>();
         audioSource = GetComponent<AudioSource>();
     }
     private void Start()
