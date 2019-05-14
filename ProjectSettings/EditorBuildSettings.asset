@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/milestone4.unity
     guid: 99ca7918147c5c7488943e970042139e
+  - enabled: 1
+    path: Assets/Scenes/milestone4inventorymenutest.unity
+    guid: c15f7bd7f675c9847bdbfbbd171f5658
   m_configObjects: {}
