@@ -766,7 +766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 785e09b1a74d4044e8e9e60b1fb0cf56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSceneName: milestone4inventorymenutest
+  gameSceneName: Area1
   creditsMenuPanel: {fileID: 1097382278}
   titleMenuPanel: {fileID: 2116403901}
 --- !u!82 &388484359
