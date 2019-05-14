@@ -3888,7 +3888,7 @@ PrefabInstance:
     - target: {fileID: 1393876642722922408, guid: e8cb692ec4d7be145bce85676145d3ea,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000023027704
+      value: 0.00006385771
       objectReference: {fileID: 0}
     - target: {fileID: 1393876642602429799, guid: e8cb692ec4d7be145bce85676145d3ea,
         type: 3}
@@ -4462,7 +4462,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 6acb458e3627cfb47b3a6cc6e8cbde22, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
