@@ -7043,7 +7043,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayText: 'Wardrobe '
   key: {fileID: 553636869}
-  consumesKey: 0
+  consumesKey: 1
   lockedDisplayText: Wardrobe (Locked)
   lockedAudioClip: {fileID: 8300000, guid: 43755e1866118f14f84122ce4ef17aec, type: 3}
   openAudioClip: {fileID: 8300000, guid: 8d20033cc43974b41bebc72159528db0, type: 3}
@@ -7481,7 +7481,7 @@ PrefabInstance:
     - target: {fileID: 1393876642722922408, guid: e8cb692ec4d7be145bce85676145d3ea,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000057175803
+      value: -0.000018246299
       objectReference: {fileID: 0}
     - target: {fileID: 1393876642602429799, guid: e8cb692ec4d7be145bce85676145d3ea,
         type: 3}
