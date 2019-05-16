@@ -50,6 +50,10 @@ public class InventoryMenu : MonoBehaviour
         InventoryMenuItemToggle toggle = clone.GetComponent<InventoryMenuItemToggle>();
         toggle.AssociatedInventoryObject = inventoryObjectToAdd;
     }
+    public void RemoveItemFromMenu(InventoryObject inventoryObjectToRemove)
+    {
+        
+    }
     private void ShowMenu()
     {
         canvasGroup.alpha = 1;

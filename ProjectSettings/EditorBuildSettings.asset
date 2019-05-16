@@ -12,15 +12,15 @@ EditorBuildSettings:
     path: Assets/Scenes/mainmenu.unity
     guid: 9016192ae4c60cb4d925d16ad28e9da1
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: b667458298c7a2f41bd4d7e05df68249
-  - enabled: 0
-    path: Assets/Scenes/milestone4.unity
-    guid: 99ca7918147c5c7488943e970042139e
-  - enabled: 1
     path: Assets/Scenes/milestone4inventorymenutest.unity
     guid: c15f7bd7f675c9847bdbfbbd171f5658
   - enabled: 1
     path: Assets/Scenes/Area1.unity
     guid: cae0404e9073955468fe3d7723783cf5
+  - enabled: 1
+    path: Assets/Scenes/Area2.unity
+    guid: ad4074348707e2347918a515b0905672
+  - enabled: 1
+    path: Assets/Scenes/Area3.unity
+    guid: 86c963edb565c4d48959e2010b194cbc
   m_configObjects: {}

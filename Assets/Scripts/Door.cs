@@ -25,6 +25,7 @@ public class Door : InteractiveObject
     private bool isLocked = false;
     private Animator animator;
     private bool isOpen = false;
+    public bool IsOpen { get {return isOpen;} private set {isOpen = value;}}
     private int shouldOpen = Animator.StringToHash(nameof(shouldOpen));
     public override string DisplayText
     {
@@ -81,5 +82,6 @@ public class Door : InteractiveObject
         isLocked = false;
         if (key != null && consumesKey)
             PlayerInventory.InventoryObjects.Remove(key);
+            InventoryMenu.Instance.RemoveItemFromMenu(key);
     }
 }
